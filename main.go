@@ -1,11 +1,16 @@
 package main
 
 func main() {
-	hand, remainingDeck := deal(newDeck(), 2)
-	hand.print()
-	remainingDeck.print()
-}
+	//slicing[startingIndexIncluding:upToNotIncluding]
+	// hand, remainingDeck := deal(newDeck(), 2)
 
-func newCard() string {
-	return "Five of Diamonds"
+	cards := newDeckFromFile("cards")
+
+	cards.shuffle()
+	cards.print()
+
+	// cards.saveToFile("cards")
+
+	// hand.print()
+	// remainingDeck.print()
 }
